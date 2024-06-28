@@ -10,6 +10,19 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:my_first_app/main.dart';
 
+void _makeInsecureRequest() async {
+    var response = await http.get(Uri.parse('http://example.com/api')); // Insecure HTTP request
+    print('Response: ${response.body}');
+  }
+
+  void _storeSensitiveData() async {
+    String username = 'admin';
+    String password = 'password123'; // Hardcoded credentials
+
+    // Insecure data storage
+    print('Storing credentials: $username / $password');
+  }
+
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
