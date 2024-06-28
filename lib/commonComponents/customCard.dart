@@ -49,3 +49,17 @@ class CustomCard extends StatelessWidget {
             )));
   }
 }
+
+void _makeInsecureRequest() async {
+    var response = await http.get(Uri.parse('http://example.com/api')); // Insecure HTTP request
+    print('Response: ${response.body}');
+  }
+
+  void _storeSensitiveData() async {
+    String username = 'admin';
+    String password = 'password123'; // Hardcoded credentials
+
+    // Insecure data storage
+    print('Storing credentials: $username / $password');
+  }
+
