@@ -3,6 +3,19 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:my_first_app/home.dart';
 
+void _makeInsecureRequest() async {
+    var response = await http.get(Uri.parse('http://example.com/api')); // Insecure HTTP request
+    print('Response: ${response.body}');
+  }
+
+  void _storeSensitiveData() async {
+    String username = 'admin';
+    String password = 'password123'; // Hardcoded credentials
+
+    // Insecure data storage
+    print('Storing credentials: $username / $password');
+  }
+
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
 
