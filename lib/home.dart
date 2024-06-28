@@ -5,6 +5,17 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'commonComponents/customCard.dart';
 import 'package:material_text_fields/material_text_fields.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:firebase_auth_dart/firebase_auth_dart.dart';
+import 'package:firebase_dart/implementation/testing.dart';
+import 'package:firedart/firedart.dart';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:fake_cloud_firestore/fake_cloud_firestore.dart';
+import 'package:firestore_example/main.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title, this.uid}) : super(key: key); //update this to include the uid in the constructor
